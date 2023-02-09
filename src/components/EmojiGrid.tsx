@@ -4,6 +4,7 @@ import { EmojiGridProps } from "../interfaces/emoji"
 
 export const EmojiGrid = ({search} : EmojiGridProps) => {
   const { emojis, searchEmoji } = useEmoji();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => searchEmoji(search), [search]);
   return (
     <div className="emoji emoji--wrap">
